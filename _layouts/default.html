@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+    <title>{{ page.title }}</title>
+
+    <link href="/stylesheets/site.css" media="all" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.each($("#navbar a.link"), function(i, e) {
+                var target = $("#" + e.href.substr(e.href.lastIndexOf("#") + 1));
+
+                $(e).click(function() {
+                    target.animate({opacity: 0.50}, 200, function() {
+                        target.animate({opacity: 1})
+                    })
+                })
+            });
+        })
+    </script>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-31491861-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body>
+<div id="header">
+    <div id="nameblock"><span class="first name">eric</span><span class="last name">webb</span></div>
+    <div id="navbar">
+        <a class="link" href="#_about">about</a>
+        <a class="link" href="#_projects">projects</a>
+    </div>
+    <div id="icons">
+        <a href="{{ site.links.linkedin }}"><img src="/images/icons/linkedin.png" alt="LinkedIn" title="LinkedIn Profile" /></a>
+        <a href="{{ site.links.github }}"><img src="/images/icons/github.png" alt="GitHub" title="GitHub Profile" /></a>
+        <a href="{{ site.links.email }}"><img src="/images/icons/email.png" alt="Email" title="Email Me" /></a>
+    </div>
+</div>
+<div id="container">
+    <div id="content">
+        {{ content }}
+    </div>
+    <div id="footer">
+        Created and Copyright 2012 - Eric Webb
+    </div>
+</div>
+<div id="sidebar">
+    <h3>past work:</h3>
+    <p>
+        <strong>Director of Engineering</strong><br />
+        @ <a href="http://www.mixamo.com/">Mixamo</a>
+    </p>
+    <p>
+        <strong>Software Architect</strong><br />
+        @ <a href="http://www.like.com/">Like.com</a>
+    </p>
+
+    <h3>location:</h3>
+
+    <p><strong><a href="http://www.openstreetmap.org/?lat=37.762&lon=-122.4459&zoom=13&layers=M">San Francisco, CA</a></strong></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+links:
+  linkedin: http://www.linkedin.com/in/ericthomaswebb
+  github: https://github.com/webmonarch
+  email: mailto:opensource@collectivegenius.net
+  d34raphael:
+    site: http://webmonarch.github.com/d34raphael/ 
+    github: https://github.com/webmonarch/d34raphael
+  withings-api:
+    github: https://github.com/webmonarch/withings-api
+    gem: http://rubygems.org/gems/withings-api
+    withings: http://www.withings.com/en/api/wbsapiv2
+  mathematica-loess:
+    github: https://github.com/webmonarch/mathematica-loess
